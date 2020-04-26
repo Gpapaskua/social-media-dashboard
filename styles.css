@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+}
+.header{
+    height: 35vh;
+    background-color: hsl(225, 100%, 98%);
+    display: flex;
+    justify-content: space-between;
+}
+.navbar{
+    margin: 1rem 0rem 0rem 9rem;
+}
+.navbar .heading{
+    font-size: 1.8rem;
+}
+.navbar p{
+    margin-top: 0.2rem;
+    color: hsl(228, 12%, 44%);
+    font-weight: 600;
+}
+.bg-switch{
+    display: flex;
+    margin: 1rem 9rem 0 0;
+}
+.bg-switch p{
+    margin: 0.5rem;
+    color: hsl(228, 12%, 44%);
+    font-weight: 600;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    -webkit-transition: .4s;
+    transition: .4s;
+  }  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-image: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  }
+  
+  input:focus + .slider {
+    background-image: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -1.5rem auto;
+   
+}
+.medium-card{
+    background: hsl(227, 47%, 96%);
+    width: 18%;
+    margin: -4rem 1rem 1rem 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 5px 4px 21px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 4px 21px -2px rgba(0,0,0,0.75);
+    box-shadow: 5px 4px 21px -2px rgba(0,0,0,0.75);
+    
+}
+.medium-card:hover{
+    cursor: pointer;
+    opacity: 0.7; 
+    transition: all 0.2s ease-in;
+}
+.medium-card:nth-child(1){
+    border-top: 0.3rem solid  hsl(195, 100%, 50%);
+}
+.medium-card:nth-child(2){
+    border-top: 0.3rem solid  hsl(203, 89%, 53%);
+}
+.medium-card:nth-child(3) {
+    border-top: 0.3rem solid  hsl(329, 70%, 58%);
+}
+.medium-card:nth-child(4){
+    border-top: 0.3rem solid   hsl(348, 97%, 39%);
+}
+.tittle{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+.medium-card img{
+   margin-right: 0.5rem;
+}
+.medium-card h2{
+    font-size: 3rem;
+    
+}
+.medium-card .followers{
+    color: hsl(228, 12%, 44%);
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+}
+.stats{
+    padding: 2rem;
+}
+.green{
+    color: hsl(163, 72%, 41%);
+}
+.overview{
+    margin: 4rem auto;
+    
+}
+.overview h1{
+    margin-left: 9rem;
+    color: hsl(228, 12%, 44%);
+}
+
+.overview-card{
+    background: hsl(227, 47%, 96%);
+    width: 18%;
+    margin: 2rem 1rem -1rem 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    
+}
+.aligner{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 1rem;
+    
+}
+.overview-tittle{
+    color: hsl(228, 12%, 44%);
+}
+.count{
+    font-size: 2rem;
+}
+.persentage{
+    align-self: center;
+    font-size: 1rem;
+    color: hsl(163, 72%, 41%);
+}
+.red{
+    color: hsl(356, 69%, 56%);
+}
+.overview-card img{
+    margin: 0rem 0.2rem 0.2rem 0;
+}
+@media screen and (max-width: 768px){
+    .header{
+        flex-direction: column;
+    }
+    .navbar{
+        align-self: center;
+        margin: 0.5rem auto;
+    }
+    .bg-switch{
+        align-self: center;
+        padding-bottom: 2rem;
+        padding-right: 2rem;
+    }
+    .cards{
+        margin: 2rem auto;
+        flex-direction: column;
+    }
+    .medium-card{
+        width: 70%;
+        margin: 0rem auto 2rem auto;
+    }
+    .overview-card{
+        width: 70%;
+        margin: 1rem auto;
+    }
+}
